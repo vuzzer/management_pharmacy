@@ -4,10 +4,41 @@ $username = "root";
 $password = "";
 $dbname = "arifpharmacy";
 
-$conn = new mysqli($hostname,$username,$password,$dbname);
+$conn = new mysqli($hostname,$username,$password);
 
+// Make my_db the current database
+$db_selected = mysqli_select_db($conn, $dbname);
+
+if (!$db_selected) {
+  // If we couldn't, then it either doesn't exist, or we can't see it.
+  $sql = 'CREATE DATABASE arifpharmacy';
+
+  if (mysqli_query($conn, $sql)) {
+      echo "Database my_db created successfully\n";
+  } else {
+      echo 'Error creating database: ' . mysqli_error() . "\n";
+  }
+}
+
+mysqli_close($conn);
+
+
+$conn = new mysqli($hostname,$username,$password,$dbname);
 if($conn->connect_error) {
     die("Connection Fail".$conn->connect_error);
+}
+
+$query = "SELECT ID FROM tb_stock";
+$result = mysqli_query($conn, $query);
+
+if(empty($result)) {
+                $query = "CREATE TABLE tb_stock (
+                          ID int(11) AUTO_INCREMENT,
+                          stock_id varchar(255) NOT NULL,
+                          stock_status varchar(255) NOT NULL,
+                          PRIMARY KEY  (ID)
+                          )";
+                $result = mysqli_query($conn, $query);
 }
 
 
@@ -17,10 +48,12 @@ $stockstatus = $_POST['stock_status'];
 $sql = "INSERT INTO tb_stock( stock_id,stock_status) VALUES($stocktid, '$stockstatus')";
 // $dept, $subject, $contact, $email
 if ($conn->query($sql) === TRUE) {
-    echo "Your Information Saved successfully";
+    echo "Your Information Saved successfully\n";
+    echo "<a href='../index.php'>return to homepage</a>"
 } else {
-    if ($id == "" || $name == ""  ) {
-         echo "Please input your values! ";
+    if ($stocktid == "" || $stockstatus == ""  ) {
+         echo "Please input your values!\n";
+         echo "<a href='../stock_insert.php'><h3><strong>Retry</strong></h3></a>";
     }else {
          echo "Error: " . $sql . "<br>" . $conn->error;
     }
