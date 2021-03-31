@@ -25,7 +25,7 @@
     <title>Pharmacy Management System</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/welcome.css" rel="stylesheet">
 	
 
     <!-- Custom fonts for this template -->
@@ -241,7 +241,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/welcome.min.js"></script>
 
   </body>
 

@@ -143,11 +143,11 @@ function printlayer(layer)
 			</div>
 			<hr>
 			<div class="form-group">
-			Arif Pharmacy
+			Rue 12 Pharmacy
 			</div>
 		<div class="form-group" >
-			Sector-10,uttara Model Town</br>
-			Dhaka-1230
+			Treichville,rue 12</br>
+			Abidjan
 				
 		<div class="form-group" >
 			Phone: 01773611681
@@ -220,7 +220,7 @@ function printlayer(layer)
 <div style="float:right;">
 Signature
 <hr/>
-Arif Hasan
+Ben Hasan
 </div>
 <br/>
 <br/><br/><br/><br/>

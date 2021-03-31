@@ -24,8 +24,8 @@
 
     <title>Pharmacy Management System</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- welcome core CSS -->
+    <link href="css/welcome.css" rel="stylesheet">
 	
 
     <!-- Custom fonts for this template -->
@@ -58,7 +58,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
       <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start welcome</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -222,10 +222,10 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- welcome core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/welcome.min.js"></script>
 
   </body>
 
